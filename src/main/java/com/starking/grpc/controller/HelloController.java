@@ -1,6 +1,4 @@
-package com.starking.grpc.controllers;
-
-//import com.starking.HelloServiceGrpc;
+//package com.starking.grpc.controller;
 //
 //import io.grpc.stub.StreamObserver;
 //import net.devh.boot.grpc.server.service.GrpcService;
@@ -16,4 +14,4 @@ package com.starking.grpc.controllers;
 //        responseObserver.onNext(response);
 //        responseObserver.onCompleted();
 //    }
-
+//}

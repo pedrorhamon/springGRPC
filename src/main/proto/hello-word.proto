@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-option java_package = "com.starking";
+option java_package = "com.starking.grpc";
 option java_multiple_files = true;
 
-package com.starking;
+package com.starking.grpc;
 
 service HelloService {
   rpc Create(ProductRequest) returns (ProductResponse);
