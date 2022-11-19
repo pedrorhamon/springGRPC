@@ -18,8 +18,16 @@ public class HelloController extends HelloServiceGrpc.HelloServiceImplBase {
 	
 	@Override
 	public void findAll(EmptyRequest request, StreamObserver<ProductResponseList> responseObserver) {
-		// TODO Auto-generated method stub
 		super.findAll(request, responseObserver);
 	}
-
+	
+	@Override
+	public void delete(RequestById request, StreamObserver<ProductResponse> responseObserver) {
+		super.delete(request, responseObserver);
+	}
+	
+	@Override
+	public void findById(RequestById request, StreamObserver<ProductResponse> responseObserver) {
+		super.findById(request, responseObserver);
+	}
 }
