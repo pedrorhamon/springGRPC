@@ -4,10 +4,10 @@ option java_package = "com.starking.grpc";
 option java_multiple_files = true;
 package com.starking.grpc;
 
-service HelloService {
+service ProductService {
 	rpc Create (ProductRequest) returns (ProductResponse);
 	rpc FindById (RequestById) returns (ProductResponse);
-	rpc Delete (RequestById) returns (ProductResponse);
+	rpc Delete (RequestById) returns (EmptyResponse);
 	rpc FindAll (EmptyRequest) returns (ProductResponseList);
 }
 
@@ -15,16 +15,27 @@ message ProductResponseList {
 	repeated ProductResponse products = 1;
 }
 
-message EmptyRequest {}
+message EmptyRequest {
+}
+
+message EmptyResponse {
+}
 
 message RequestById {
-	optional int64 id = 1;
+	required int64 id = 1;
 }
 
 message ProductRequest {
 	optional string name = 1;
 	optional double price = 2;
 	optional int32 quantity_in_stock = 3;
+}
+
+message ProductResponse {
+	required int64 id = 1;
+	optional string name = 2;
+	optional double price = 3;
+	optional int32 quantity_in_stock = 4;
 }
 
 message ProductResponse {
