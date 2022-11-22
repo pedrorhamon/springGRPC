@@ -15,8 +15,7 @@ message ProductResponseList {
 	repeated ProductResponse products = 1;
 }
 
-message EmptyRequest {
-}
+message EmptyRequest {}
 
 message RequestById {
 	optional int64 id = 1;
